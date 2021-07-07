@@ -10,4 +10,5 @@ object Constant {
     const val PATH_IMAGE_SKIN = "img/champion/splash"
     const val PATH_IMAGE_CHAMPION = "img/champion"
     const val PATH_LIST_CHAMPION = "champion.json"
+    const val DATABASE_NAME = "heroFavorite.db"
 }
