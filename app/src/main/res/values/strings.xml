@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hero_02</string>
+    <string name="app_title">HERO LOL</string>
+    <string name="champion">champion</string>
+    <string name="text_class">class</string>
+    <string name="favorite">favorite</string>
 </resources>

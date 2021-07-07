@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseFragment<viewBinding : ViewBinding, viewModel : ViewModel> : Fragment() {
 
-    protected abstract val viewModel: ViewModel
+    protected abstract val viewModel: viewModel
 
-    private var _viewBinding: ViewBinding? = null
+    private var _viewBinding: viewBinding? = null
     protected val viewBinding get() = _viewBinding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -26,7 +26,7 @@ abstract class BaseFragment : Fragment() {
         bindView()
     }
 
-    abstract fun inflateViewBinding(inflater: LayoutInflater): ViewBinding
+    abstract fun inflateViewBinding(inflater: LayoutInflater): viewBinding
     abstract fun setUpView()
     abstract fun bindView()
 }
