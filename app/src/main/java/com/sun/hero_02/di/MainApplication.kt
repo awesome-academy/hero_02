@@ -11,10 +11,13 @@ class MainApplication : Application() {
         super.onCreate()
 
         val modules = listOf(
-            viewModelModule
+            viewModelModule,
+            repositoryModule,
+            dataSourceModule,
+            storageModule
         )
         startKoin {
-            androidLogger()
+            androidLogger(org.koin.core.logger.Level.NONE)
             androidContext(this@MainApplication)
             modules(modules)
         }
