@@ -1,7 +1,7 @@
 package com.sun.hero_02.utils
 
 object Constant {
-    const val BASE_URL = "https://ddragon.leagueoflegends.com/cdn"
+    const val BASE_URL = "https://ddragon.leagueoflegends.com/cdn/"
     const val BASE_LANGUAGE = "data/en_US"
     const val BASE_VERSION = "11.9.1"
     const val PATH_CHAMPION_DETAIL = "champion"
