@@ -12,6 +12,10 @@ class ChampionsFragment : BaseFragment<FragmentChampionsBinding, ChampionsViewMo
     override fun inflateViewBinding(inflater: LayoutInflater) = FragmentChampionsBinding.inflate(inflater)
 
     override fun setUpView() {
+        viewBinding.apply {
+            lifecycleOwner = this@ChampionsFragment
+            viewModel = this@ChampionsFragment.viewModel
+        }
     }
 
     override fun bindView() {

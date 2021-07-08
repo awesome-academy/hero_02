@@ -12,7 +12,7 @@ val viewModelModule = module {
 
     viewModel { ClassViewModel() }
 
-    viewModel { ChampionsViewModel() }
+    viewModel { ChampionsViewModel(get()) }
 
     viewModel { FavoriteViewModel() }
 }
