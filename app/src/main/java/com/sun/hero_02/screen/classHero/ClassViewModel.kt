@@ -1,4 +1,4 @@
-package com.sun.hero_02.screen.`class`
+package com.sun.hero_02.screen.classHero
 
 import androidx.lifecycle.ViewModel
 
