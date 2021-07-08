@@ -11,3 +11,7 @@ object Constant {
     const val PATH_IMAGE_CHAMPION = "img/champion"
     const val PATH_LIST_CHAMPION = "champion.json"
 }
+
+enum class HeroImageType {
+    SQUARE, SKIN, SPELL, PASSIVE
+}
