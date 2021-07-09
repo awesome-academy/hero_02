@@ -38,6 +38,7 @@ class ChampionsAdapter(
             binding.apply {
                 viewModel?.hero = hero
                 executePendingBindings()
+                itemHeroContainer.setOnClickListener { onItemClicked(hero) }
             }
         }
     }

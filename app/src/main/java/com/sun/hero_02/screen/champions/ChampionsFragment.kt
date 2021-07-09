@@ -6,6 +6,7 @@ import com.sun.hero_02.base.BaseFragment
 import com.sun.hero_02.databinding.FragmentChampionsBinding
 import com.sun.hero_02.screen.champions.adapter.ChampionsAdapter
 import com.sun.hero_02.screen.search.SearchFragment
+import com.sun.hero_02.screen.detail.DetailFragment
 import com.sun.hero_02.utils.extension.addFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -14,7 +15,9 @@ class ChampionsFragment : BaseFragment<FragmentChampionsBinding, ChampionsViewMo
     override val viewModel: ChampionsViewModel by viewModel()
 
     private val championsAdapter by lazy {
-        ChampionsAdapter {}
+        ChampionsAdapter {
+            showHeroDetail(it.id)
+        }
     }
 
     override fun inflateViewBinding(inflater: LayoutInflater) = FragmentChampionsBinding.inflate(inflater)
@@ -42,6 +45,10 @@ class ChampionsFragment : BaseFragment<FragmentChampionsBinding, ChampionsViewMo
         champions.observe(viewLifecycleOwner, {
             championsAdapter.submitList(it)
         })
+    }
+
+    private fun showHeroDetail(idHero: String?) {
+        addFragment(R.id.fragmentContainer, DetailFragment.newInstance(idHero), true)
     }
 
     companion object {
