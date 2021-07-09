@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/color_081B27"
+        android:background="@color/color_081B27"
         android:paddingTop="@dimen/_10sdp">
 
         <androidx.constraintlayout.widget.Guideline
