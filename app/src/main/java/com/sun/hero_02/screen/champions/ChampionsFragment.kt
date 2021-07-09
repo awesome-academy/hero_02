@@ -1,9 +1,12 @@
 package com.sun.hero_02.screen.champions
 
 import android.view.LayoutInflater
+import com.sun.hero_02.R
 import com.sun.hero_02.base.BaseFragment
 import com.sun.hero_02.databinding.FragmentChampionsBinding
 import com.sun.hero_02.screen.champions.adapter.ChampionsAdapter
+import com.sun.hero_02.screen.search.SearchFragment
+import com.sun.hero_02.utils.extension.addFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ChampionsFragment : BaseFragment<FragmentChampionsBinding, ChampionsViewModel>() {
@@ -26,6 +29,13 @@ class ChampionsFragment : BaseFragment<FragmentChampionsBinding, ChampionsViewMo
 
     override fun bindView() {
         setupObserver()
+        onEvent()
+    }
+
+    private fun onEvent() {
+        viewBinding.buttonSearch.setOnClickListener {
+            addFragment(R.id.fragmentContainer, SearchFragment.newInstance())
+        }
     }
 
     private fun setupObserver() = with(viewModel) {
