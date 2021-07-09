@@ -2,6 +2,7 @@ package com.sun.hero_02.di
 
 import com.sun.hero_02.screen.group.HeroGroupViewModel
 import com.sun.hero_02.screen.champions.ChampionsViewModel
+import com.sun.hero_02.screen.detail.DetailViewModel
 import com.sun.hero_02.screen.favorite.FavoriteViewModel
 import com.sun.hero_02.screen.home.HomeViewModel
 import com.sun.hero_02.screen.search.SearchViewModel
@@ -18,4 +19,6 @@ val viewModelModule = module {
     viewModel { FavoriteViewModel() }
 
     viewModel { SearchViewModel(get()) }
+
+    viewModel { DetailViewModel(get()) }
 }
