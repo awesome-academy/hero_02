@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import com.sun.hero_02.R
 import com.sun.hero_02.base.BaseFragment
 import com.sun.hero_02.databinding.FragmentHomeBinding
-import com.sun.hero_02.screen.classHero.ClassFragment
+import com.sun.hero_02.screen.group.HeroGroupFragment
 import com.sun.hero_02.screen.champions.ChampionsFragment
 import com.sun.hero_02.screen.favorite.FavoriteFragment
 import com.sun.hero_02.utils.ItemBottomNav
@@ -19,7 +19,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun setUpView() {
         val listFragment = listOf(
             ChampionsFragment.newInstance(),
-            ClassFragment.newInstance(),
+            HeroGroupFragment.newInstance(),
             FavoriteFragment.newInstance()
         )
         viewBinding.viewPagerHome.run {
