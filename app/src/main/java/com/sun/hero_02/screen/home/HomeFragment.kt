@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import com.sun.hero_02.R
 import com.sun.hero_02.base.BaseFragment
 import com.sun.hero_02.databinding.FragmentHomeBinding
-import com.sun.hero_02.screen.`class`.ClassFragment
+import com.sun.hero_02.screen.classHero.ClassFragment
 import com.sun.hero_02.screen.champions.ChampionsFragment
 import com.sun.hero_02.screen.favorite.FavoriteFragment
 import com.sun.hero_02.utils.ItemBottomNav

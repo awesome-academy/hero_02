@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sun.hero_02.screen.search.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/color_081B27"
+        android:paddingTop="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <EditText
+            android:id="@+id/editTextHeroName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_search_input_corners"
+            android:backgroundTint="@color/color_D8D8D8"
+            android:hint="@string/search"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_search_button_corners"
+            android:backgroundTint="@color/color_212121"
+            android:padding="0dp"
+            android:text="@string/search"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toEndOf="@+id/editTextHeroName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHero"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHeroName"
+            app:spanCount="2"
+            tools:listitem="@layout/item_hero"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
