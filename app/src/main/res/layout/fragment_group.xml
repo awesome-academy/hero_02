@@ -24,7 +24,8 @@
             app:layout_constraintDimensionRatio="4:1"
             app:layout_constraintEnd_toEndOf="@id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.4" />
+            app:layout_constraintWidth_percent="0.45"
+            tools:listitem="@layout/item_layout_group"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -42,7 +43,8 @@
             app:layout_constraintDimensionRatio="4:1"
             app:layout_constraintStart_toStartOf="@id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.4" />
+            app:layout_constraintWidth_percent="0.45"
+            tools:listitem="@layout/item_layout_group"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHero"

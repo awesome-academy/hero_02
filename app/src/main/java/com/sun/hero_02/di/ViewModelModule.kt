@@ -12,7 +12,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 val viewModelModule = module {
     viewModel { HomeViewModel() }
 
-    viewModel { HeroGroupViewModel() }
+    viewModel { HeroGroupViewModel(get()) }
 
     viewModel { ChampionsViewModel(get()) }
 

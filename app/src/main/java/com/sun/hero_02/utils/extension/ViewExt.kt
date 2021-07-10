@@ -19,3 +19,9 @@ fun ImageView.loadHeroImage(imageName: String?, type: HeroImageType) {
             .into(this)
     }
 }
+
+fun ImageView.loadImageLocal(url: Int) {
+    Glide.with(this)
+        .load(url)
+        .into(this)
+}
