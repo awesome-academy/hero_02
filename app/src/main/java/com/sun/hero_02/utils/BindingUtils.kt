@@ -9,10 +9,12 @@ import com.sun.hero_02.utils.extension.loadImageLocal
 
 object BindingUtils {
     @JvmStatic
-    @BindingAdapter("app:heroImage")
-    fun ImageView.setHeroImage(url: String?) {
+    @BindingAdapter(value = ["app:url", "app:placeHolder"], requireAll = false)
+    fun ImageView.loadImageUrl(url: String?, placeHolder: Int?) {
         url?.let {
-            this.loadHeroImage(it, HeroImageType.SQUARE)
+            placeHolder?.let {
+                this.loadHeroImage(url, HeroImageType.values()[it])
+            }
         }
     }
 
@@ -32,6 +34,20 @@ object BindingUtils {
             HARD.nameDiff -> R.drawable.ic_hard
             AVERAGE.nameDiff -> R.drawable.ic_average
             else -> R.drawable.ic_easy
+        }
+    )
+
+    @JvmStatic
+    @BindingAdapter("app:iconTag")
+    fun ImageView.setIconTag(tag: String?) = setImageResource(
+        when (tag) {
+            HeroGroup.ASSASSIN.tag ->  R.drawable.ic_assassin
+            HeroGroup.FIGHTER.tag ->  R.drawable.ic_fighter
+            HeroGroup.MAGE.tag ->  R.drawable.ic_mage
+            HeroGroup.MARKSMAN.tag ->  R.drawable.ic_marksman
+            HeroGroup.SUPPORT.tag ->  R.drawable.ic_support
+            HeroGroup.TANK.tag ->  R.drawable.ic_tank
+            else -> R.drawable.ic_all_class
         }
     )
 }

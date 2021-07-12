@@ -4,6 +4,7 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import com.sun.hero_02.data.model.Hero
 import com.sun.hero_02.utils.HeroDifficulty.*
+import com.sun.hero_02.utils.HeroImageType
 
 class ItemHeroViewModel : BaseObservable() {
     @Bindable
@@ -22,4 +23,8 @@ class ItemHeroViewModel : BaseObservable() {
             in EASY.diff -> EASY.nameDiff
             else -> ANY.nameDiff
         }
+
+    @get:Bindable
+    val imageType
+        get() = HeroImageType.SQUARE.ordinal
 }

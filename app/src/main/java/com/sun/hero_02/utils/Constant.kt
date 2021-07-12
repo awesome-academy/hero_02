@@ -12,6 +12,11 @@ object Constant {
     const val PATH_LIST_CHAMPION = "champion.json"
 }
 
+object HeroSpellSymbol {
+    const val PASSIVE = "P"
+    val SKILL = mutableListOf("Q", "W", "E", "R")
+}
+
 enum class HeroImageType {
     SQUARE, SKIN, SPELL, PASSIVE
 }
