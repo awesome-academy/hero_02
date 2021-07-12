@@ -5,6 +5,7 @@ import androidx.databinding.BindingAdapter
 import com.sun.hero_02.R
 import com.sun.hero_02.utils.HeroDifficulty.*
 import com.sun.hero_02.utils.extension.loadHeroImage
+import com.sun.hero_02.utils.extension.loadImageLocal
 
 object BindingUtils {
     @JvmStatic
@@ -12,6 +13,14 @@ object BindingUtils {
     fun ImageView.setHeroImage(url: String?) {
         url?.let {
             this.loadHeroImage(it, HeroImageType.SQUARE)
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("app:loadImageLocal")
+    fun ImageView.setHeroGroupImage(url: Int?) {
+        url?.let {
+            this.loadImageLocal(it)
         }
     }
 

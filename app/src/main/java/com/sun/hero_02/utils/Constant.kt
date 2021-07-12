@@ -15,3 +15,13 @@ object Constant {
 enum class HeroImageType {
     SQUARE, SKIN, SPELL, PASSIVE
 }
+
+enum class HeroGroup(val tag: String) {
+    ANY_CLASS("Any Class"),
+    ASSASSIN("Assassin"),
+    FIGHTER("Fighter"),
+    MAGE("Mage"),
+    TANK("Tank"),
+    SUPPORT("Support"),
+    MARKSMAN("Marksman")
+}
