@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class HeroSkin(
-    val id: String?,
+    var id: String?,
     val num: Int?,
     val name: String?
 ) : Parcelable

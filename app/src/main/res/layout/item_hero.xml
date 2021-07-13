@@ -39,7 +39,8 @@
                     android:id="@+id/imageViewHero"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:heroImage="@{viewModel.hero.image.image}" />
+                    app:placeHolder="@{viewModel.imageType}"
+                    app:url="@{viewModel.hero.image.image}" />
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
